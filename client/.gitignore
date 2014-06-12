@@ -5,6 +5,7 @@
 packages
 web/out/*
 pubspec.lock  // Except for application packages
+.buildlog
 
 ## Compiled files
 web/assets/compiled
