@@ -1,11 +1,7 @@
-## Dart env
-client/packages/
-server/packages/
-.project
+## Dart
 *.iml
 *.ipr
 *.iws
-.idea/
 *.dart.js
 *.js_
 *.js.deps
@@ -14,5 +10,22 @@ server/packages/
 web/out/*
 
 
-## IDE env
-.idea/
+## EditorConfig
+.idea
+.project
+
+
+## OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
