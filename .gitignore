@@ -7,7 +7,6 @@
 *.js.deps
 *.js.map
 .buildlog
-web/out/*
 
 
 ## EditorConfig
