@@ -4,6 +4,7 @@
 ## Dart
 packages
 web/out/*
+pubspec.lock  // Except for application packages
 
 ## Compiled files
 web/assets/compiled
