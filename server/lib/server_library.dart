@@ -5,4 +5,4 @@ import 'dart:async';
 import 'dart:convert' show JSON;
 
 
-part 'src/tryClass.dart';
+part 'src/player.dart';
