@@ -1,3 +1,3 @@
 name: ShadowHunters_Server
 environment:
-  sdk: '>=0.8.10+6 <2.0.0'
+  sdk: any
