@@ -1,0 +1,4 @@
+class tryClass {
+  tryClass() {
+  }
+}
