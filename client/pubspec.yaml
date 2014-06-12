@@ -1,0 +1,5 @@
+name: ShadowHunters_Client
+environment:
+  sdk: any
+dependencies:
+  browser: any

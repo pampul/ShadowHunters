@@ -1,0 +1,9 @@
+## Client gitignore
+## ------------------
+##
+## Dart Packages
+packages
+
+## Compiled files
+web/assets/compiled
+app/assets/css
