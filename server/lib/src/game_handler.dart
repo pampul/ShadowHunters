@@ -22,11 +22,11 @@ class GameHandler {
       Map dataFromClient = JSON.decode(message);
       // Choosing an action accordingly to received command
       switch(dataFromClient["cmd"]){
-        case "dataHandled":
+        case "getMessage":
+          print('Message received from the client : ${dataFromClient["arg"]}');
 
-          break;
-        case "move":
-
+          // Sending the number to the client
+          conn.add(JSON.encode({"cmd":"getMessage","arg": "Message '${dataFromClient["arg"]}' received !!"}));
           break;
       }
     }
@@ -45,26 +45,6 @@ class GameHandler {
       _reset();
     }
     );
-  }
-
-  void _countdown() {
-    // Letting players know that a new game is about to start
-    int count = 3;
-    // Waits two seconds before launching the countdown
-    new Timer(new Duration(seconds:2), (){
-      new Timer.periodic(new Duration(seconds:1), (Timer timer){
-        if (count==0) {
-          timer.cancel();
-          _start();
-        }
-        _sendToAll({
-            "cmd":"message",
-            "arg":"Starting a new game in $count seconds..."
-        });
-        count--;
-      });
-
-    });
   }
 
   void _reset() {

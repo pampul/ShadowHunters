@@ -9,6 +9,10 @@ void main() {
   // Initializing WebSocket connection
   Connection conn = new Connection("ws://" + window.location.host + "/ws", game);
 
+  submitMsg.onClick.listen((e) {
 
+    conn.send({"cmd":"getMessage", "arg": inputElement.value});
+
+  });
 
 }
