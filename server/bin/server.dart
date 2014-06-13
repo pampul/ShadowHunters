@@ -40,5 +40,5 @@ void runServer(String basePath, int port) {
 
 void main() {
   // Running the server
-  runServer("../../client/web", 4000);
+  runServer("../../client/build/web", 4000);
 }

@@ -3,5 +3,5 @@
 ##
 ## Dart Packages
 packages
-pubspec.lock  // Except for application packages
+pubspec.lock
 .buildlog
