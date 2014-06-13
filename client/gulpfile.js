@@ -15,9 +15,9 @@ var paths = {
 
   scss: {
     src: [
-      'web/scss/style.scss'
+      'scss/style.scss'
     ],
-    dest: 'app/assets/compiled/css',
+    dest: 'web/assets/compiled/css',
     finalDest: 'web/assets/css'
   },
 
@@ -62,4 +62,4 @@ gulp.task('images', function () {
 
 gulp.task('default', ['watch']);
 
-gulp.task('prod', ['styles', 'images']);
+gulp.task('prod', ['styles']);
