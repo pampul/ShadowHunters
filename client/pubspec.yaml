@@ -5,6 +5,6 @@ dependencies:
   browser: any
   google_oauth2_client: '>=0.3.4'
   angular: 0.10.0
-  shadow_dom: any
+  web_components: ">=0.3.4 <0.4.0"
 transformers:
 - angular

@@ -27,6 +27,7 @@ class Connection {
       switch(dataFromServer["cmd"]) {
         case "getMessage":
           print('Message received from server : ${dataFromServer["arg"]}');
+
           break;
       }
     });

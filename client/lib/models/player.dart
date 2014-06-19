@@ -1,13 +1,13 @@
 part of client_library;
 
 class Player {
-  String nickname;
+  String email;
   int number;
   bool myTurn;
   int points;
 
   void _toggleTurn() {
-    if(this.myTurn) {
+    if (this.myTurn) {
       this.myTurn = false;
     } else {
       this.myTurn = true;
@@ -15,7 +15,7 @@ class Player {
   }
 
   void _reset() {
-    nickname=null;
+    email = null;
     number = null;
     points = null;
     myTurn = null;

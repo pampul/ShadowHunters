@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 
-import 'package:ShadowHunters_Server/server_library.dart';
+import 'package:ShadowHunters_Server/ServerLibrary.dart';
 
 void runServer(String basePath, int port) {
 
