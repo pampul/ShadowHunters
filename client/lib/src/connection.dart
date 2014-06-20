@@ -4,9 +4,8 @@ class Connection {
 
   WebSocket ws;
   String url;
-  Game game;
 
-  Connection(this.url, this.game) {
+  Connection(this.url) {
     _init();
   }
 

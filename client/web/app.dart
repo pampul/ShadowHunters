@@ -7,6 +7,7 @@ import 'package:angular/application_factory.dart';
 class MyAppModule extends Module {
   MyAppModule() {
     type(GoogleSignInService);
+    type(StompClientService);
     type(MainController);
     type(SignInController);
     value(RouteInitializerFn, mainRouterInitializer);
@@ -19,4 +20,10 @@ void main() {
   applicationFactory()
   .addModule(new MyAppModule())
   .run();
+
+  /*
+  Connection conn = new Connection("ws://" + window.location.host + "/ws");
+
+  conn.send({"cmd":"getMessage", "arg": "Oui oui"});
+  */
 }
