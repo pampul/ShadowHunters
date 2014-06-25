@@ -7,7 +7,7 @@ import 'package:angular/application_factory.dart';
 class MyAppModule extends Module {
   MyAppModule() {
     type(GoogleSignInService);
-    type(StompClientService);
+    type(WebSocketClientService);
     type(MainController);
     type(SignInController);
     value(RouteInitializerFn, mainRouterInitializer);

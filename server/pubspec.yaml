@@ -1,3 +1,4 @@
 name: ShadowHunters_Server
 environment:
   sdk: any
+dependencies:

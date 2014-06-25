@@ -22,11 +22,11 @@ class GameHandler {
       Map dataFromClient = JSON.decode(message);
       // Choosing an action accordingly to received command
       switch(dataFromClient["cmd"]){
-        case "getMessage":
+        case "signIn":
           print('Message received from the client : ${dataFromClient["arg"]}');
 
           // Sending the number to the client
-          conn.add(JSON.encode({"cmd":"getMessage","arg": "Message '${dataFromClient["arg"]}' received !!"}));
+          conn.add(JSON.encode({"cmd":"signIn","arg": "Message '${dataFromClient["arg"]}' received !!"}));
           break;
       }
     }

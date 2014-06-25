@@ -24,7 +24,7 @@ void runServer(String basePath, int port) {
     print("Server is running —> http://localhost:${port}");
     var sc = new StreamController();
     sc.stream.transform(new WebSocketTransformer()).listen(
-        gameHandler.onConnection
+      gameHandler.onConnection
     );
 
     server.listen((HttpRequest request) {

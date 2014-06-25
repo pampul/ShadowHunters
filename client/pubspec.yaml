@@ -6,7 +6,5 @@ dependencies:
   google_oauth2_client: '>=0.3.4'
   angular: 0.10.0
   web_components: ">=0.3.4 <0.4.0"
-  stomp: 0.7.2
-  logging: any
 transformers:
 - angular

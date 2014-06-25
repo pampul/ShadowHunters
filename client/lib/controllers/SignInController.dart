@@ -7,11 +7,11 @@ class SignInController {
   final Scope _scope;
   final Router _router;
   GoogleSignInService _googleSignInService;
-  StompClientService _client;
+  WebSocketClientService _client;
 
   LinkElement signInElement = querySelector('#google-sign-in-button');
 
-  SignInController(this._scope, this._client) {
+  SignInController(this._scope, this._client, this._router) {
 
   }
 
@@ -20,15 +20,17 @@ class SignInController {
     this._googleSignInService = new GoogleSignInService();
     this._googleSignInService.auth.login().then((Token token){
       // Player signed in, let's send to server
-      this.signInRequest();
+      this.signInRequest(token);
     });
 
   }
 
-  void signInRequest(){
+  void signInRequest(token){
 
-    this._client.connectWebsocket().then((_) {
-      this._client.jsonMessage("/ws", JSON.encode({"cmd":"getMessage", "arg": "oui oui"}));
+    _client.jsonMessageRequest('signIn', token, 'signIn').then((_){
+      // TODO check if player can connect
+      _client.disconnect();
+      _router.go('game', {});
     });
 
   }
