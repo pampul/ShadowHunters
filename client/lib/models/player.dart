@@ -6,8 +6,15 @@ class Player {
   int number;
   int points;
 
+  Player(int userId, String email, int points, int number){
+    this.userId = userId;
+    this.email = email;
+    this.points = points;
+    this.number = number;
+  }
+
   void _reset() {
-    id = null;
+    userId = null;
     email = null;
     number = null;
     points = null;

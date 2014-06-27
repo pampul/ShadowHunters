@@ -29,7 +29,6 @@ class SignInController {
 
     _client.jsonMessageRequest('signIn', token, 'signIn').then((_){
       // TODO check if player can connect
-      _client.disconnect();
       _googleSignInService.isAuthenticated = true;
 
       this._scope.emit('user-signed-in', token);

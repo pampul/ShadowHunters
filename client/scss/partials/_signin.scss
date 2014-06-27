@@ -2,11 +2,12 @@
 
   padding: 40px;
 
-  .signin-with-google{
+  .signin-with-google, .player-card{
 
     margin: 20px auto 10px;
     text-align: center;
     img{
+      cursor: pointer;
       max-width: 250px;
       max-height: 100px;
     }

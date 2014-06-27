@@ -1,5 +1,37 @@
 <div game-controller>
 
-  Game View
+  <div id="game-container">
+
+    <div class="row">
+
+      <div class="col-lg-3 col-md-3">
+
+        <div id="players">
+
+          <div class="player-card card">
+
+            <h4>Players in room :</h4>
+
+            <div class="player" ng-repeat="player in gameCtrl.players">
+
+              {{player.userId}}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-9 col-md-9">
+
+
+      </div>
+
+    </div>
+
+
+  </div>
 
 </div>

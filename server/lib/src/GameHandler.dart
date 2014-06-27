@@ -23,10 +23,15 @@ class GameHandler {
       // Choosing an action accordingly to received command
       switch(dataFromClient["cmd"]){
         case "signIn":
-          print('Message received from the client : ${dataFromClient["arg"]}');
-
           // Sending the number to the client
           conn.add(JSON.encode({"cmd":"signIn","arg": "Message '${dataFromClient["arg"]}' received !!"}));
+          break;
+
+        case "connectPlayer":
+          print('connect');
+          print(dataFromClient["arg"]);
+          conn.add(JSON.encode({"cmd":"getGameState","arg": {"currentPlayer": {"id": "12", "email": "florian.mithieux@gmail.com", "points": "12"}, "game":{"players": {"12": {"id": "12", "email": "florian.mithieux@gmail.com"}, "11": {"id": "11", "email": "ouioui@gmail.com"}}}}}));
+
           break;
       }
     }
@@ -45,6 +50,10 @@ class GameHandler {
       _reset();
     }
     );
+  }
+
+  void getGameDataForPlayer(clientData){
+
   }
 
   void _reset() {
