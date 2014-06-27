@@ -11,7 +11,7 @@ class SignInController {
 
   LinkElement signInElement = querySelector('#google-sign-in-button');
 
-  SignInController(this._scope, this._client, this._router) {
+  SignInController(this._scope, this._client, this._router, this._googleSignInService) {
 
   }
 
@@ -30,7 +30,9 @@ class SignInController {
     _client.jsonMessageRequest('signIn', token, 'signIn').then((_){
       // TODO check if player can connect
       _client.disconnect();
-      _router.go('game', {});
+      _googleSignInService.isAuthenticated = true;
+
+      this._scope.emit('user-signed-in', token);
     });
 
   }

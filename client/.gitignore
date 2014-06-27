@@ -10,7 +10,7 @@ pubspec.lock
 
 ## Compiled files
 web/assets/compiled
-app/assets/css
+web/assets/css
 
 
 ## Node.js
@@ -27,3 +27,6 @@ logs
 results
 npm-debug.log
 node_modules
+
+## Bower components
+bower_components

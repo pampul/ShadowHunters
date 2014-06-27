@@ -4,13 +4,15 @@ import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
 
 
-class MyAppModule extends Module {
-  MyAppModule() {
+class AppModule extends Module {
+  AppModule() {
     type(GoogleSignInService);
     type(WebSocketClientService);
+    type(GameController);
     type(MainController);
     type(SignInController);
     value(RouteInitializerFn, mainRouterInitializer);
+    type(Player);
     factory(NgRoutingUsePushState,
         (_) => new NgRoutingUsePushState.value(false));
   }
@@ -18,12 +20,6 @@ class MyAppModule extends Module {
 
 void main() {
   applicationFactory()
-  .addModule(new MyAppModule())
+  .addModule(new AppModule())
   .run();
-
-  /*
-  Connection conn = new Connection("ws://" + window.location.host + "/ws");
-
-  conn.send({"cmd":"getMessage", "arg": "Oui oui"});
-  */
 }
