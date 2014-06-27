@@ -15,7 +15,8 @@ var paths = {
 
   scss: {
     src: [
-      'scss/style.scss'
+      'scss/style.scss',
+      'bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss'
     ],
     dest: 'web/assets/compiled/css',
     finalDest: 'web/assets/css'
